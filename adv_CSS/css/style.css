@@ -1,0 +1,214 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* universal selector. wont be inherited by child elements */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+
+/* everything related to font, always specify in the body selector. will all be inherited by child elements */
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+/* to specify gradients, use background-image */
+/* clip path is very modern */
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 180, 133, 0.8)), 
+    url(../img/hero.jpg); 
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px; 
+    /* a workaround to remove shaky animation effect
+    ppl dont understand why it works lol*/
+}
+
+/* display: block means Displays an element as a 
+block element (like <p>). It starts on a new line */
+/* call the animation name and specify duration*/
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    padding-left: 20px;
+    align-content: center;
+
+    animation: moveInLeft 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; 
+    how many times to animate it */
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400px;
+    letter-spacing: 17.4px;
+
+    animation: moveInRight 1s;
+}
+
+/* add animatio to heading primary main */
+/* for broser performance, best to only animate 2 properties */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+ 
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* pseudoclass: a special state of a selector, ie hover
+style elements under a certain condition */
+/* must add inline block bc before, it was an 
+inline element only */
+/* inline block element means it is treated as 
+if it was like text. */
+/* 2 ways to animate in CSS, transition is another 
+between hover state and active state, must be
+on the initial state. The reason it has to be on
+the initial state is because you load the button
+saying that there can be a transition on all elements */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+/* recurring theme: transform. used to make neat effects */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+/* pseudo element- allows you to style part of an element */
+/* The ::after selector inserts something after the 
+content of each selected element(s). */
+/* display inline block to match the parent */
+/* the after pseudoelement is treated like a child of
+the element, so width of 100% = 100% of the button */
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all, .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* animation fill is important, because there is a delay,*/
+/* The animation will apply the values defined in the 
+first relevant keyframe */
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}

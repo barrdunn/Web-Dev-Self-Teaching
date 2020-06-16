@@ -1,0 +1,43 @@
+/* 
+Responsive: works for any display size or resolution
+
+1. Fluid grid
+    • all elements are sized in relative units, like %
+
+2. Flexible images
+    • size in relative units
+
+3. Media query
+    • different style rules for different browser widths
+
+*/
+
+
+/* 
+FLUID GRID: Use Responsive grid system (Tabbed in Chrome)
+
+Each instance lets you specify how many COLUMNS
+///////         ///////         ///////
+//   //         //   //         //   //
+///////         ///////         ///////
+
+Add instances to create ROWS
+
+• Resize based on browser window size
+• COOL--when content box is too small, the containers STACK
+//////////////////////
+//                  //
+//                  //
+//////////////////////  
+
+//////////////////////
+//                  //
+//                  //
+//////////////////////   
+
+//////////////////////
+//                  //
+//                  //
+//////////////////////   
+
+*/

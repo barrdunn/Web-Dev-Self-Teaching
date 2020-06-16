@@ -1,0 +1,94 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ .clearfix:after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+ 
+ body {
+    font-family: Helvetica Neue, Arial;
+ }
+ 
+ h1, h2 {
+    color: #00960b;
+ }
+ 
+ h1 {
+     font-size: 40px;
+     margin-bottom: 20px;
+ }
+
+ h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* using ID is not a good practice because you can only use it once
+code may change down the road. Its better to use CLASSES */
+
+.main-text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.author-text {
+    font-size: 22px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px
+}
+
+.container {
+    width: 1140px;
+    margin: 20px auto 0px auto;
+}
+
+.blog-post {
+    /* background-color: royalblue; */
+    width: 75%;
+    float: left;
+    padding-right: 30px;
+    position: relative;
+}
+
+.other-posts {
+    /* background-color: seagreen; */
+    width: 25%;
+    float: right;
+}
+
+.author-box {
+    /* background-color: yellow; */
+    border-top: 3px solid #999;
+    padding: 20px;
+}
+
+.other {
+    margin-bottom: 40px;
+}
+
+.author-box img {
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+}
+
+.blog-post img {
+    height: 150px;
+}
+
+.date {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
