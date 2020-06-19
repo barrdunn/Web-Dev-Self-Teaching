@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<!-- tells mobile phones that they should always start with a scale of 1 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="vendors/css/normalize.css">
         <link rel="stylesheet" href="vendors/css/grid.css">
         <link rel="stylesheet" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" href="./resources/css/style.css">
+        <link rel="stylesheet" href="./resources/css/queries.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap">
         <title>Omnifood</title>
     </head>
@@ -123,9 +127,9 @@
                     </figure>
                 </li>
                 <li>
-                    <figure class="meal-photo"> 
+                    <div class="meal-photo"> 
                         <img src="./resources/img/8.jpg" alt="Granola with cherries and strawberries">
-                    </figure>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -166,81 +170,93 @@
             <div class="row">
                 <div class="col span-1-of-4 box">
                     <img src="./resources/img/lisbon-3.jpg" alt="lisbon">
-                    <h3>Lisbon</h3>
+                    
+                    <div class="city-info">
+                        <h3>Lisbon</h3>
 
-                    <div class="city-feature">
-                        <ion-icon name="person" class="small-icons"></ion-icon>
-                        1600+ happy eaters
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="person" class="small-icons"></ion-icon>
+                            1600+ happy eaters
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="star" class="small-icons"></ion-icon>
-                        60+ top chefs
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="star" class="small-icons"></ion-icon>
+                            60+ top chefs
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
-                        <a href="#">@omnifood_lx</a>
+                        <div class="city-feature">
+                            <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
+                            <a href="#">@omnifood_lx</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col span-1-of-4 box">
                     <img src="./resources/img/san-francisco.jpg" alt="sanfran" id="sanfran">
-                    <h3>San Francisco</h3>
+                    
+                    <div class="city-info">
+                        <h3>San Francisco</h3>
 
-                    <div class="city-feature">
-                        <ion-icon name="person" class="small-icons"></ion-icon>
-                        3700+ happy eaters
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="person" class="small-icons"></ion-icon>
+                            3700+ happy eaters
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="star" class="small-icons"></ion-icon>
-                        160+ top chefs
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="star" class="small-icons"></ion-icon>
+                            160+ top chefs
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
-                        <a href="#">@omnifood_sf</a>
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
+                            <a href="#">@omnifood_sf</a>
+                        </div>
+                     </div>
                 </div>
 
                 <div class="col span-1-of-4 box">
                     <img src="./resources/img/berlin.jpg" alt="berlin">
-                    <h3>Lisbon</h3>
+                    
+                    <div class="city-info">
+                        <h3>Berlin</h3>
 
-                    <div class="city-feature">
-                        <ion-icon name="person" class="small-icons"></ion-icon>
-                        2300+ happy eaters
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="person" class="small-icons"></ion-icon>
+                            2300+ happy eaters
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="star" class="small-icons"></ion-icon>
-                        110+ top chefs
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="star" class="small-icons"></ion-icon>
+                            110+ top chefs
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
-                        <a href="#">@omnifood_berlin</a>
+                        <div class="city-feature">
+                            <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
+                            <a href="#">@omnifood_berlin</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col span-1-of-4 box">
                     <img src="./resources/img/london.jpg" alt="london">
-                    <h3>Lisbon</h3>
+                    
+                    <div class="city-info">
+                        <h3>London</h3>
 
-                    <div class="city-feature">
-                        <ion-icon name="person" class="small-icons"></ion-icon>
-                        1200+ happy eaters
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="person" class="small-icons"></ion-icon>
+                            1200+ happy eaters
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="star" class="small-icons"></ion-icon>
-                        50+ top chefs
-                    </div>
+                        <div class="city-feature">
+                            <ion-icon name="star" class="small-icons"></ion-icon>
+                            50+ top chefs
+                        </div>
 
-                    <div class="city-feature">
-                        <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
-                        <a href="#">@omnifood_london</a>
+                        <div class="city-feature">
+                            <ion-icon name="logo-twitter" class="small-icons"></ion-icon>
+                            <a href="#">@omnifood_london</a>
+                        </div>
                     </div>
                 </div>
             </div>
