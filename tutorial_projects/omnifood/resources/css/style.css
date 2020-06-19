@@ -144,7 +144,8 @@ a:active {
 
 /* ----- BUTTONS ----- */
 .btn:link,
-.btn:visited {
+.btn:visited, 
+input[type=submit] {
     display: inline-block; /* we need this because an <a> tag element is inline */
     padding: 10px 30px;
     font-weight: 300;
@@ -154,7 +155,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit]  {
     background-color: #e67e22;
     border: solid 1px #e67e22;   
     color: #fff;
@@ -168,12 +170,14 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #bf6516;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active, {
     border: solid 1px #bf6516;   
 }
 
@@ -452,4 +456,121 @@ cite img {
 .plan-box div:last-child {
     text-align: center;
     border: 0;
+}
+
+/* --------------------------------------------- */
+/* FORM */
+/* --------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* just a new type of selector, below. */
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    background-color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+/* removes blue line that shows up when clicking on form elements */
+*:focus {
+    outline: none;
+}
+
+/* --------------------------------------------- */
+/* FOOTER */
+/* --------------------------------------------- */
+
+footer {
+    background-color: rgb(46, 46, 46);
+    font-size: 90%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin: 15px 20px 0px 0px;sa
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links [name="logo-facebook"] {
+    transition: color .2s;
+}
+
+.social-links [name="logo-instagram"] {
+    transition: color .2s;
+}
+
+.social-links [name="logo-twitter"] {
+    transition: color .2s;
+}
+
+.social-links [name="logo-google-playstore"] {
+    transition: color .2s;
+}
+
+.social-links [name="logo-facebook"]:hover {
+    color: #3b5998;
+}
+
+.social-links [name="logo-instagram"]:hover {
+    color: #c32aa3;
+}
+
+.social-links [name="logo-twitter"]:hover {
+    color: #1da1f2;
+}
+
+.social-links [name="logo-google-playstore"]:hover {
+    color: #1d8338;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin: 20px;
+    font-size: 80%
 }
