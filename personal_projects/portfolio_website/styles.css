@@ -12,7 +12,12 @@ body {
 .header {
     height: 90vh;
     background-color: #242438;
-    position: relative;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    display: block;
 }
 
 .navbar {
@@ -20,7 +25,6 @@ body {
     position: absolute;
     top: 10%;
     right: 13%;
-    z-index: 1;
 }
 
 .navlinks {
@@ -47,7 +51,7 @@ body {
 }
 
 .headshot-container {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     right: 5%;
     animation: moveInRight 1s; 
@@ -59,11 +63,10 @@ body {
     bottom: 0;
     right: 0;
     animation: moveInRight 1s;
-
 }
 
 .text-box {
-    position: absolute;
+    position: relative;
     top: 40%;
     left: 35%;
     transform: translate(-50%, -50%);
@@ -93,7 +96,6 @@ body {
 
 .services-list {
     list-style: none;
-    position: absolute;
     display: inline-block;
     padding-top: 80px;
     line-height: 2.5;
@@ -116,8 +118,18 @@ body {
 }
 
 .service_4 {
-    opacity: 0;
+    opacity: 0
     animation: fadeIn 1200ms 2500ms forwards;
+}
+
+.section {
+    background-color: white;
+    width: 100%;
+    display: block;
+    height: 900px;
+    position: absolute;
+    top: 700px;
+    z-index: 2;
 }
 
 @keyframes moveInRight {
