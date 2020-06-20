@@ -130,7 +130,7 @@ h2:after {
     margin-top: -7px; 
 }
 
-/* ----- BUTTONS ----- */
+/* ----- LINKS ----- */
 a:link,
 a:visited {
     color: #e67e22;
@@ -574,5 +574,5 @@ footer p {
     color: #888;
     text-align: center;
     margin: 20px;
-    font-size: 80%
+    font-size: 80%;
 }
