@@ -1,0 +1,38 @@
+/* Layers of processing
+1. Declared Value
+    what the user declares
+
+2. Cascaded value
+    value after the cascade is applied
+
+3. Specified value
+    Default value of a certain CSS property; 
+    not relevant when there is already a cascaded value.
+    But each CSS property has an initial value, used if
+    no cascaded (declared) value
+
+4. Computed value
+    converting relative values to absolute
+    color declarations like "white" are computed
+    i.e. root font value (rem) = 16px, CSS declared 1.5rem, so
+    computed value is 24px.
+
+    % (fonts)           * parents computed font size                -
+    % (lengths)         * parents computed width                    -
+    em (font)           * parents computed font size                -   FONT BASED
+    em (lengths)        * current element's computed font size      -   FONT BASED
+    rem                 * root computed font size                   -   FONT BASED
+    vh                  * viewport height                           -   VIEWPORT BASED
+    vw                  * viewport width                            -   VIEWPORT BASED
+
+    em = parent's computed font size
+    rem = root computed font size 
+
+5. Used value:
+    in the rendering of the page, browser takes the 
+    percentage/relative value and creates a pixel value,
+    an actual value ready to be used in the layout 
+
+*/
+
+
