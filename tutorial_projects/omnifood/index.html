@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./resources/css/style.css">
         <link rel="stylesheet" href="./resources/css/queries.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"  />
         <title>Omnifood</title>
     </head>
     <body>
@@ -19,22 +20,23 @@
                     <img src="./resources/img/logo-white.png" alt="Omnifood Logo" class="logo">
                     <img src="./resources/img/logo.png" alt="Omnifood Logo" class="logo-black">
                     <ul class="main-nav">
-                        <li><a href="#">Food delivery</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Our cities</a></li>
-                        <li><a href="#">Sign up</a></li>
+                        <!-- see anchor: #features -->
+                        <li><a href="#features">Food delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#cities">Our cities</a></li>
+                        <li><a href="#plans">Sign up</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="hero-text-box"> <!-- hero = big background image -->
                 <h1>Goodbye junk food. <br> Hello super healthy meals.</h1>
-                <a class="btn btn-full" href="#">I’m hungry</a>
-                <a class="btn btn-ghost" href="#">Show me more</a>
-            </div>
+                <a class="btn btn-full js--scroll-to-plans" href="#">I’m hungry</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
+            </div> <!-- notice how JS classes are named to make it obvious what will happen -->
 
         </header>
        
-        <section class="section-features js--section-features"> <!-- create a separate class for js to separate out your code -->
+        <section class="section-features js--section-features" id="features"> <!-- create a separate class for js to separate out your code -->
             <div class="row">
                 <h2>Get food fast &mdash; not fast food</h2>
                 <p class="long-copy">Hello, we’re Omnifood, your new 
@@ -43,7 +45,7 @@
                     care of that, we’re really good at it, we promise!</p>
             </div>
 
-            <div class="row">
+            <div class="row js--wp-1">
                 <!-- added box class - dont change any of the fluid
                 grid elements -->
                 <div class="col span-1-of-4 box"> <!--col comes from grid file-->
@@ -135,7 +137,7 @@
             </ul>
         </section>
 
-        <section class="section-steps">
+        <section class="section-steps" id="works">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2> 
             </div>
@@ -163,7 +165,7 @@
             </div>
         </section>
 
-        <section class="section-cities">
+        <section class="section-cities" id="cities">
             <div class="row">
                 <h2>We're currently in these cities</h2> 
             </div>
@@ -292,7 +294,7 @@
               </div>
         </section>
 
-        <section class="section-plans">
+        <section class="section-plans js--section-plans" id="plans">
             <div class="row">
                 <h2>Start eating healthy today</h2>
             </div>

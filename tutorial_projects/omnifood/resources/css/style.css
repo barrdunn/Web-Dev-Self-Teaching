@@ -259,7 +259,7 @@ header {
     color: #555555;
 }
 
-.main-nav { margin-top: 20px; }
+.sticky .main-nav { margin-top: 20px; }
 
 /* Sticky navi */
 .sticky {
@@ -608,4 +608,17 @@ footer p {
     text-align: center;
     margin: 20px;
     font-size: 80%;
+}
+
+/* --------------------------------------------- */
+/* Animations */
+/* --------------------------------------------- */
+
+.js--wp-1 {
+    opacity: 0;
+}
+
+/* new selector-has both classes at the same time */
+.js--wp-1.animate__animated.animate__fadeIn {
+    opacity: 1;
 }
