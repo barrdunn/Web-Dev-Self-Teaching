@@ -1,0 +1,10 @@
+/* Enhancing page speed 
+
+1. optimize heavy images
+    *use chrome inspector to see image size displayed, vs actual size
+    *remember to account for repsonsive design, images sometimes get bigger
+    *image size should always be twice as much as they appear-for hi res displays.
+    *use preview in mac to reduce size
+    *compress biggest images
+
+2. minify CSS and jQuery code */
