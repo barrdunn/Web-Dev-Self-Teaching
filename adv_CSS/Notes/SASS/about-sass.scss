@@ -1,0 +1,30 @@
+/* Sass is a CSS preprocessor
+
+CSS files can get large and unmanageable: SASS makes it
+easier, without losing the core functionality of CSS
+
+SASS Code --SASS Compiler--> Compiled CSS Code
+
+*/
+
+
+
+// Traditional CSS
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+    color: orange;
+}
+
+
+// with SASS: Nesting
+
+.navigation {
+    list-style: none;
+
+    li {
+        color: orange;
+    }
+}

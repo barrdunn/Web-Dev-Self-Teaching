@@ -6,22 +6,33 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
+/* GLOBAL RESETS */
 /* universal selector. wont be inherited by child elements */
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box; 
+*,
+*::after,               /* select before and after pseudos */
+*::before {             /*    because they dont count in the */
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /* now every item in the CSS file
+                            will be forced to inherit 
+                            from the body declaration */
+}
+
+/* 10/16 = 62.6 see rem-units.css doc */
+html {
+    font-size: 62.5%;
 }
 
 /* everything related to font, always specify in the body selector. will all be inherited by child elements */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 /* to specify gradients, use background-image */
@@ -39,17 +50,17 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
-.logo {
-    height: 35px;
+.header__logo {
+    height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,7 +72,7 @@ body {
     color: white;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px; 
+    margin-bottom: 6rem; 
     /* a workaround to remove shaky animation effect
     ppl dont understand why it works lol*/
 }
@@ -69,12 +80,11 @@ body {
 /* display: block means Displays an element as a 
 block element (like <p>). It starts on a new line */
 /* call the animation name and specify duration*/
-.heading-primary-main {
+.heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
-    padding-left: 20px;
+    letter-spacing: 3.5rem;
     align-content: center;
 
     animation: moveInLeft 1s;
@@ -84,11 +94,11 @@ block element (like <p>). It starts on a new line */
     how many times to animate it */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
-    font-size: 20px;
-    font-weight: 400px;
-    letter-spacing: 17.4px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
 
     animation: moveInRight 1s;
 }
@@ -98,11 +108,11 @@ block element (like <p>). It starts on a new line */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -114,11 +124,11 @@ block element (like <p>). It starts on a new line */
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10px);
     }
  
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -130,7 +140,7 @@ block element (like <p>). It starts on a new line */
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
@@ -154,25 +164,26 @@ saying that there can be a transition on all elements */
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    font-size: 1.6rem;
 }
 
 /* recurring theme: transform. used to make neat effects */
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -188,7 +199,7 @@ the element, so width of 100% = 100% of the button */
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -196,7 +207,7 @@ the element, so width of 100% = 100% of the button */
     transition: all, .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -208,7 +219,7 @@ the element, so width of 100% = 100% of the button */
 /* animation fill is important, because there is a delay,*/
 /* The animation will apply the values defined in the 
 first relevant keyframe */
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
