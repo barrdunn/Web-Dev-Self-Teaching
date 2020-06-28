@@ -29,3 +29,15 @@ SASS Code --SASS Compiler--> Compiled CSS Code
         color: orange;
     }
 }
+
+/* Mixins, Extends, Functions
+
+use case: clearfix function
+@mixin clearfix
+
+Store code inside the mixin
+
+Then use @include clearfix to use the clearfix 
+on any element
+
+Use mixins for similar text formatting instead
