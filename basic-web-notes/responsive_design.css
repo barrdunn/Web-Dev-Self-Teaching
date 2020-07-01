@@ -1,0 +1,31 @@
+/* Must add to html head! */
+
+        /* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+
+/* media query break points */
+
+/* put MQ's in a separate CSS file */
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+/* device width for popular devices like iphone/ipad */
+
+/* MOBILE FIRST?
+If you build mobile first, you're building up your CSS 
+in complexity. What I mean with that is that your mobile 
+views are usually much simpler and thus require less CSS. */

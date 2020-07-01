@@ -1,0 +1,169 @@
+* {
+    /* See CSS box model! */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Avenir Heavy", sans-serif;
+}
+
+.header {
+    height: 90vh;
+    background-color: #242438;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.navbar {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+    height: 100px;
+}
+
+.navlink {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 4px;
+    padding-right: 6px;
+    transition: all .2s;
+}
+
+.navlink:hover {
+    background-color: white;
+    color: #242438;
+}
+
+.headshot-container {
+    /* position: absolute; */
+    bottom: 0;
+    right: 5%;
+    animation: moveInRight 1s; 
+}
+
+.headshot {
+    position: absolute;
+    height: 80vh;
+    bottom: 0;
+    right: 0;
+    animation: moveInRight 1s;
+}
+
+.text-box {
+    position: relative;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 500px;
+}
+
+.heading-primary-name {
+    color: #C6C6C6;
+    display: block;
+    animation: fadeIn 1s 800ms forwards;
+    opacity: 0;
+}
+
+.heading-primary-job {
+    display: block;
+    background-color:#0098F6;
+    background-image: linear-gradient(45deg, #0098F6, #355FE4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size: 50px;
+    animation: fadeIn 1000ms 1400ms forwards;
+    opacity: 0;   
+}
+
+.services-list {
+    list-style: none;
+    display: inline-block;
+    padding-top: 80px;
+    line-height: 2.5;
+    color: #c6c6c6;
+}
+
+.service_1 {
+    opacity: 0;
+    animation: fadeIn 1200ms 1900ms forwards;
+}
+
+.service_2 {
+    opacity: 0;
+    animation: fadeIn 1200ms 2100ms forwards;
+}
+
+.service_3 {
+    opacity: 0;
+    animation: fadeIn 1200ms 2300ms forwards;
+}
+
+.service_4 {
+    opacity: 0
+    animation: fadeIn 1200ms 2500ms forwards;
+}
+
+.section {
+    background-color: white;
+    width: 100%;
+    display: block;
+    height: 900px;
+    position: absolute;
+    top: 700px;
+    z-index: 2;
+}
+
+@keyframes moveInRight {
+    0% {
+            opacity: 0;
+            transform: translateX(20px)
+    }
+
+    100% {
+            opacity: 1;
+            transform: translateX(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+            opacity: 0;
+    }
+
+    100% {
+            opacity: 100;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .headshot-container {
+        height: 30vh;
+        
+      }
+    
+    .headshot {
+      height: 30vh;
+      margin: auto;
+    }
+  }
+
+

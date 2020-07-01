@@ -1,0 +1,43 @@
+/* Sass is a CSS preprocessor
+
+CSS files can get large and unmanageable: SASS makes it
+easier, without losing the core functionality of CSS
+Better organization 
+
+SASS Code --SASS Compiler--> Compiled CSS Code
+
+*/
+
+
+
+// Traditional CSS
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+    color: orange;
+}
+
+
+// with SASS: Nesting
+
+.navigation {
+    list-style: none;
+
+    li {
+        color: orange;
+    }
+}
+
+/* Mixins, Extends, Functions
+
+use case: clearfix function
+@mixin clearfix
+
+Store code inside the mixin
+
+Then use @include clearfix to use the clearfix 
+on any element
+
+Use mixins for similar text formatting instead

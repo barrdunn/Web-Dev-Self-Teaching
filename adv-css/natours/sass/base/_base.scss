@@ -1,0 +1,22 @@
+// basic level resets and selectors 
+
+*,
+*::after,               /* select before and after pseudos */
+*::before {             /*    because they dont count in the */
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /* now every item in the CSS file
+                            will be forced to inherit 
+                            from the body declaration */
+}
+
+/* 10/16 = 62.6 see rem-units.css doc */
+html {
+    // this defines what 1 rem is
+    font-size: 62.5%;
+}
+
+/* everything related to font, always specify in the body selector. will all be inherited by child elements */
+body {
+    box-sizing: border-box;
+}

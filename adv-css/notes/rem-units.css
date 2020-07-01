@@ -1,0 +1,47 @@
+/*  Use REM for an easy way to reduce the size
+of many elements when hitting a breakpoint for
+a page to be displayed on a mobile device
+
+Rather than rewrite a lot of code in Media Queries
+
+BEST PRACTICE: Use relative units instead of pixels. REM is easiest
+because it depends on the root only
+*/
+
+/* ---------------------------- */
+
+html {
+    font-size: 10px;
+}
+
+/* 1 REM now = 10px */
+
+/* IF */
+body {
+    padding: 30px;
+}
+
+/* USE */
+
+body {
+    padding: 3rem;
+}
+
+/* ---------------------------- */
+
+/* Dont change font-size in the html tag because it
+will override what the user has set- ie people with 
+bad eyes set the browser to a bigger size
+
+Default size is 16px.
+
+Therefore 100% will = 16px
+
+*/
+
+html {
+    font-size: 100%;
+}
+
+
+/* REMs not supported below IE9 */

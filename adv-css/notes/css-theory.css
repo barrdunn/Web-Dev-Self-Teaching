@@ -1,0 +1,38 @@
+/* 
+
+2. DISPLAY PROPERTIES --------------------------------------
+display: block; 
+
+the display property sets the type of box you are using.
+
+Block level boxes: Will occupy as much space as possible and create a new line
+Inline level boxes: Only occupies the space it's content needs. ****
+    **No heights and widths on inline elements
+    **paddings and margins only horizontal
+
+Inline-block: a fix for the limitations above
+    Box model applies as shown in the box-model-adv.png
+
+
+
+3. VISUAL FORMATTING---------------------------------------
+Normal Flow: elements laid out in their natural order
+                not floated
+                not absolutely positioned
+
+Float: Object is removed from the normal flow, and shifted
+until it touches the edge of it's box or another element
+    Text will wrap around the floated element
+    Container will not adjust it's height to the element
+    THEREFORE we use clearfixes
+
+Absolute positioning: element removed from the normal flow
+    Does not impact surrounding content or elements -- no wrap
+    Use Top/bottom/left/right to offset the element from
+    its relatively positioned container
+
+3. STACKING CONTEXTS---------------------------------------
+    Layers that form a stack
+    Z-index
+*/
+

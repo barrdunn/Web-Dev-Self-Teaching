@@ -1,0 +1,53 @@
+/* set a global size for font, define others relatively
+in percentage of the global font size */
+
+/* for use with fluid grid */
+.row {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* header/hero */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* TIP- 
+inline element - CANT set height/width
+block element -  CAN set height/width 
+inline-block - like an inline element, does not force
+a new line, but can have PADDING and MARGIN */
+
+/* button creation: pseudoclass states */
+/* use inline-block display */
+.btn:link,
+.btn:visited {
+    display: inline-block; /* we need this because an <a> tag element is inline */
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 100px;
+    color: #fff;
+}
+
+
+/* COMMENT SECTION */
+/* --------------------------------------------- */
+/* Why 1140? */
+/* --------------------------------------------- */
+
+        /* The 1140 grid fits perfectly into a 1280 monitor. 
+        On smaller monitors it becomes fluid and adapts to 
+        the width of the browser.
+
+        Beyond a certain point it uses media queries to 
+        serve up a mobile version, which essentially stacks 
+        all the columns on top of each other so the flow of 
+        information still makes sense.
+
+        Scrap 1024! Design once at 1140 for 1280, and with 
+        very little extra work, it will adapt itself to work 
+        on just about any monitor, even mobile. */

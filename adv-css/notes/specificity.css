@@ -1,0 +1,24 @@
+/* calculate specificity: 
+
+1 IDs
+2 Classes
+2 Elements */
+
+
+#nav div.pull-right a.button {
+    background-color: green;
+}
+
+
+
+/* calculate specificity: 
+
+1 IDs
+2 Classes (includes pseudoclass)
+1 Elements */
+
+/* this will NOT work, because its specificity is lower. 
+In any state, it will not win over the top declaration */
+#nav a.button:hover {
+    background-color: yellow;
+}
