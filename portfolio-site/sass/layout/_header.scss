@@ -1,0 +1,24 @@
+/* to specify gradients, use background-image */
+/* clip path is very modern */
+.header {
+    height: 95vh;
+    background-color: #242438;
+    position: relative;
+
+    &__hero-box {
+        position: absolute;
+        right: 0%;
+        bottom: 0rem;
+        height: 80rem;
+        height: 85vh;
+    }
+
+    &__hero {
+        height: 85vh;
+        bottom: 0rem;
+    }
+    
+    &__text-box {
+  
+    }
+}

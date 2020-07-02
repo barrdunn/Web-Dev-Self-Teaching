@@ -1,0 +1,53 @@
+.heading-primary {
+    color: $color-white;
+
+    &--main {
+        font-size: 6rem;
+    }
+
+    &--sub {
+        font-size: 6rem;s
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    /* font-size: 16px; */
+    color: $color-grey-dark;
+}
+
+
+// .heading-primary {
+//     color: $color-white;
+//     text-transform: uppercase;
+//     backface-visibility: hidden;
+//     margin-bottom: 6rem; 
+//     /* a workaround to remove shaky animation effect */
+
+//     &--main {
+//         font-size: 6rem;
+//         font-weight: 400;
+//         align-content: left;
+    
+//         animation: moveInLeft 1s;
+//         animation-timing-function: ease-out;
+//         /* animation-delay: 3s; */
+//         /* animation-iteration-count: 3; 
+//         how many times to animate it */
+//     }
+
+//     &--sub {
+//         font-size: 6rem;
+//         font-weight: 700;
+
+//         animation: moveInRight 1s;
+//     }
+// }
+
+// body {
+//     font-family: "Lato", sans-serif;
+//     font-weight: 400;
+//     /* font-size: 16px; */
+//     color: $color-grey-dark;
+// }
