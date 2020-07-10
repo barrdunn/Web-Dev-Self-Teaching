@@ -1,0 +1,10 @@
+/* 
+relative position: adding a margin relative to where it
+would have been in the normal document flow
+
+absolute position: specifying a margin that is relative to the 
+parent element
+    **Takes the element out of the natural document flow
+    ***it's absolute with respect to it's parent element.
+    Almost like a mini browser window. But it's a container.
+*/

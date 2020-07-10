@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', sans-serif;
+    color: rgb(41, 25, 25)
+}
+
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 6rem;
+    color: #66BFBF;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    color: #66BFBF;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+    text-align: ;
+}
+
+hr {
+    border: dotted #EAF6f6 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+a {
+    color: #11999E;
+}
+
+p {
+    line-height: 1.9;
+}
+
+.top-container {
+    background-color: #E4F9F6;
+    padding-top: 100px;
+    position: relative;
+}
+
+.top-cloud {
+    position: absolute; 
+    right: 300px;
+    top: 50px;  
+}
+
+.pro {
+    text-decoration: underline;
+}
+
+.bottom-cloud {
+    position: absolute;
+    top: 25rem;
+    left: 20rem;
+}
+
+.mountain {
+    height: 30rem;
+}
+
+.profile {
+    display: inline-block;
+    width: 500px;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.pilot {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chillies {
+    width: 20%;
+    float: right;
+    margin-left: 40px;
+}
+
+.head {
+    width: 200px;
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+.pilot-skill-description {
+    clear: left;
+}
+
+.bottom-container {
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+}
